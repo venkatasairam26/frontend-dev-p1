@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import UserProfile  from './components/UserProfile';
 import './App.css';
 
+let UserDetails = [{
+  uniqueKey:1,
+  imageUrl:"https://img.freepik.com/premium-photo/cost-living-still-life_23-2151577313.jpg?w=360",
+  userName:"Ravi",
+  role:"developer"
+},
+{
+  uniqueKey:2,
+  imageUrl:"https://img.freepik.com/premium-photo/cost-living-still-life_23-2151577313.jpg?w=360",
+  userName:"Ram",
+  role:"developer"
+},
+{
+  uniqueKey:3,
+  imageUrl:"https://img.freepik.com/premium-photo/cost-living-still-life_23-2151577313.jpg?w=360",
+  userName:"Rajaesh",
+  role:"developer"
+},
+{
+  uniqueKey:4,
+  imageUrl:"https://img.freepik.com/premium-photo/cost-living-still-life_23-2151577313.jpg?w=360",
+  userName:"Karthik",
+  role:"developer"
+}]
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {UserDetails.map((eachItem) =>(<UserProfile userDetails={eachItem} key={eachItem.uniqueKey}/>))}
     </div>
   );
 }
